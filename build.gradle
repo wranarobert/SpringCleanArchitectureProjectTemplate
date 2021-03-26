@@ -1,0 +1,38 @@
+plugins {
+  id "io.spring.dependency-management" version "${dependencyManagement}"
+}
+
+allprojects {
+  version = '0.9.0'
+  
+  repositories {
+    jcenter()
+    mavenCentral()
+  }
+}
+
+subprojects {
+  apply plugin: 'java-library'
+  apply plugin: 'io.spring.dependency-management'
+  
+  sourceCompatibility = '11'
+  
+  configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+  }
+  
+  dependencies {
+	developmentOnly     'org.springframework.boot:spring-boot-devtools'
+	compileOnly 		'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+  }
+  
+  dependencyManagement {
+    imports {
+      mavenBom("org.springframework.boot:spring-boot-dependencies:${springBoot}")
+    }
+  }
+}

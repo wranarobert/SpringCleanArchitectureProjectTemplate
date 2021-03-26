@@ -1,0 +1,9 @@
+rootProject.name='Android'
+
+include ':domain'
+project(':domain').projectDir = new File(settingsDir, '../../domain')
+
+include ':service'
+project(':service').projectDir = new File(settingsDir, '../../service')
+
+include ':app'

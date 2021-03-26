@@ -1,0 +1,6 @@
+rootProject.name = 'SpringCleanArchitectureProjectTemplate'
+
+include 'domain'
+include 'infrastructure'
+include 'service'
+include 'application'

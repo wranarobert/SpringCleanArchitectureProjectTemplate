@@ -1,0 +1,15 @@
+apply plugin: "java"
+
+dependencies {
+	implementation project(':domain')
+	
+	implementation 'javax.inject:javax.inject:1'
+	
+	implementation "an.awesome:pipelinr:${pipelinr}"
+	implementation "org.modelmapper:modelmapper:${modelMapper}"
+	implementation "com.github.mvallim:java-fluent-validator:${fluentValidator}"
+}
+
+jar {
+    enabled = true
+}

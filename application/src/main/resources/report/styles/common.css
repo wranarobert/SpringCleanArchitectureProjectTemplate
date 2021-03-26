@@ -1,0 +1,101 @@
+@page {
+  @top-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: sans-serif;
+    padding-right: 15px;
+  }
+}
+
+#invoice {
+  padding: 0px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.invoice {
+  position: relative;
+  padding: 0.6em;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+.invoice .report-col {
+  float: left;
+  width: 50%;
+}
+
+.invoice .report-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.invoice .header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3989c6;
+}
+
+.invoice .company-details {
+  text-align: right;
+  background-color: lightgrey;
+}
+
+.invoice .company-details .name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.invoice .contacts {
+  margin-bottom: 20px;
+}
+
+.invoice .invoice-to {
+  text-align: left;
+}
+
+.invoice .invoice-to .to {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.invoice .invoice-details {
+  text-align: right;
+}
+
+.invoice .invoice-details .invoice-id {
+  margin-top: 0;
+  color: #3989c6;
+}
+
+.invoice .main {
+  padding-bottom: 50px;
+}
+
+.invoice .main .notices {
+  padding-left: 6px;
+  border-left: 6px solid #3989c6;
+}
+
+.invoice .main .notices .notice {
+  font-size: 1.2em;
+}
+
+.invoice .footer {
+  width: 100%;
+  text-align: center;
+  color: #777;
+  border-top: 1px solid #aaa;
+  padding: 8px 0;
+}
+
+a.logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+tr,
+tfoot {
+  page-break-inside: avoid;
+}

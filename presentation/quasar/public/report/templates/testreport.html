@@ -1,0 +1,97 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" type="text/css" href="report/styles/common.css" />
+    </head>
+    <body>
+        <div id="invoice">
+            <div class="invoice">
+                <div class="header">
+                    <div class="report-row">
+                        <div class="report-col company-details">
+                            <div class="name">
+                                <h2>
+                                    <a href="http://example.com">ACME Corp</a>
+                                </h2>
+                            </div>
+                            <div>
+                                Unit 1, 123 Main St, Springfield, Ohio, USA, 54325
+                            </div>
+                            <div class="email">
+                                <a href="mailto:acme@example.com">acme@example.com</a>
+                            </div>
+                        </div>
+                        <div class="report-col">
+                            <div class="logo-container">
+                            	<a class="logo" href="http://example.com">
+                            		<img src="test" />
+                            	</a>
+                        	</div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="main">
+                    <div class="report-row contacts">
+                        <div class="report-col invoice-to">
+                            <div class="text-gray-light">INVOICE TO:</div>
+                            <div class="to">
+                                <h2>John Citizen</h2>
+                            </div>
+                            <div class="address">
+                                125 Second Ave, Waterside, California, America
+                            </div>
+                            <div class="email">
+                                <a href="mailto:abc@example.com">abc@example.com</a>
+                            </div>
+                        </div>
+                        <div class="report-col invoice-details">
+                            <div class="invoice-id">
+                                <h1>INVOICE 1-2-3</h1>
+                            </div>
+                            <div class="date">Date of Invoice: 2025-Mar-25</div>
+                            <div class="date">Due Date: 2025-May-25</div>
+                        </div>
+                    </div>
+                    <div class="invoice-table">
+	                    <table>
+	                        <thead>
+	                            <tr>
+	                                <th>*</th>
+	                                <th>Month</th>
+	                                <th>Savings</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr>
+	                                <td>1</td>
+	                                <td>January</td>
+	                                <td>$100</td>
+	                            </tr>
+	                            <tr>
+	                                <td>2</td>
+	                                <td>February</td>
+	                                <td>$80</td>
+	                            </tr>
+	                        </tbody>
+	                        <tfoot>
+	                            <tr>
+	                            	<td>-</td>
+	                                <td>Sum</td>
+	                                <td>$180</td>
+	                            </tr>
+	                        </tfoot>
+	                    </table>
+                    </div>
+                    <div class="thanks">Thank you!</div>
+                    <div class="notices">
+                        <div>NOTICE:</div>
+                        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+                    </div>
+                </div>
+                <div class="footer">
+                    Invoice was created on a computer and is valid without the signature and seal.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

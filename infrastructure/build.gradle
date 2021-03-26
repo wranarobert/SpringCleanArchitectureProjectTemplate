@@ -1,0 +1,37 @@
+apply plugin: "java"
+
+dependencies {
+	implementation project(':domain')
+	
+	implementation 'javax.inject:javax.inject:1'
+
+	implementation "org.modelmapper:modelmapper:${modelMapper}"
+	
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+    implementation 'com.lmax:disruptor:3.4.2'
+	implementation 'org.springframework.boot:spring-boot-starter-data-couchbase'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version: "${springCloudStarterOauth2}"
+	
+	implementation group: 'org.thymeleaf', name: 'thymeleaf', version: "${thymeleaf}"
+	implementation group: 'org.xhtmlrenderer', name: 'flying-saucer-core', version: "${flyingSaucerCore}"
+	implementation group: 'org.xhtmlrenderer', name: 'flying-saucer-pdf-itext5', version: "${flyingSaucerPdfItext5}"
+	implementation group: 'net.sf.jtidy', name: 'jtidy', version: 'r938'
+	implementation group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
+	
+	
+}
+
+configurations {
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
+jar {
+    enabled = true
+}

@@ -1,0 +1,45 @@
+<q-table :rowKey="rowKey" :filter="searchText" v-bind="attrs" v-on="listeners">
+  <!-- if you want to have sticky action column add this to table call class="sticky-action-column-table" -->
+  <!-- Search -->
+  <template v-if="search" v-slot:top-right>
+    <slot name="search-prepend"></slot>
+    <dt-search v-model="searchText"></dt-search>
+    <slot name="search-append"></slot>
+  </template>
+  <!-- Add Row -->
+  <template v-if="addForm" v-slot:top-row="props">
+    <dt-form-row key="addRow" :props="props" :formData="addForm" @update:formData="updateAddForm"
+      @formChange="onFormChange" @submitRowClick="addRow" @cancelRowClick="closeAddForm">
+      <template v-for="slot in formRowCellSlots" v-slot:[slot]="scope">
+        <slot :name="slot" v-bind="scope" />
+      </template>
+    </dt-form-row>
+  </template>
+  <!-- Editable Row Body-->
+  <template v-slot:body="props">
+    <!-- Edit Row -->
+    <dt-form-row v-if="isEditable(props)" :props="props" :formData="getEditForm(props)"
+      @update:formData="updateEditForm" @formChange="onFormChange" @submitRowClick="editRow"
+      @cancelRowClick="closeEditForm">
+      <template v-for="slot in formRowCellSlots" v-slot:[slot]="scope">
+        <slot :name="slot" v-bind="scope" />
+      </template>
+    </dt-form-row>
+    <!-- Presentation Row -->
+    <dt-row v-else :props="props" :metadata="dtRowMetadata" @printRowClick="printRow" @editRowClick="openEditForm"
+      @deleteRowClick="deleteRow">
+      <template v-for="slot in rowCellSlots" v-slot:[slot]="scope">
+        <slot :name="slot" v-bind="scope" />
+      </template>
+    </dt-row>
+    <!-- Expanded Row -->
+    <q-tr v-if="props.expand" :props="props">
+      <q-td colspan="100%">
+        <slot name="expandable-row" :props="props"></slot>
+      </q-td>
+    </q-tr>
+  </template>
+  <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
+    <slot :name="slot" v-bind="scope" />
+  </template>
+</q-table>

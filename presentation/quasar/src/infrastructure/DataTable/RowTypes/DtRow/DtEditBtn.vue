@@ -1,0 +1,11 @@
+<template>
+  <q-btn
+    round
+    size="sm"
+    color="primary"
+    icon="edit"
+    class="q-mx-xs"
+    v-bind="$attrs"
+    v-on="$listeners"
+  ></q-btn>
+</template>

@@ -1,0 +1,61 @@
+{
+  "name": "quasar-template",
+  "version": "0.0.1",
+  "description": "-",
+  "productName": "QuasarTemplate",
+  "author": "ca IT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
+    "lint:fix": "eslint --fix --ext .js,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^23.1.0",
+    "@ckeditor/ckeditor5-build-classic": "^23.1.0",
+    "@ckeditor/ckeditor5-build-decoupled-document": "^23.1.0",
+    "@ckeditor/ckeditor5-editor-decoupled": "^23.1.0",
+    "@ckeditor/ckeditor5-essentials": "^23.1.0",
+    "@ckeditor/ckeditor5-link": "^23.1.0",
+    "@ckeditor/ckeditor5-paragraph": "^23.1.0",
+    "@ckeditor/ckeditor5-theme-lark": "^23.1.0",
+    "@ckeditor/ckeditor5-upload": "^23.1.0",
+    "@ckeditor/ckeditor5-vue2": "^1.0.5",
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "axios-auth-refresh": "^2.2.8",
+    "content-disposition": "^0.5.3",
+    "core-js": "^3.6.5",
+    "downloadjs": "^1.4.7",
+    "quasar": "^1.0.0",
+    "validate.js": "^0.13.1",
+    "vue-i18n": "^8.0.0",
+    "vuex-persist": "^2.1.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.0.0",
+    "@quasar/quasar-app-extension-qpdfviewer": "^1.0.0-beta.8",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-vue": "^6.1.2"
+  },
+  "browserslist": [
+    "ie >= 11",
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

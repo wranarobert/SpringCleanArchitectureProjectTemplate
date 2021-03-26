@@ -1,0 +1,52 @@
+{"properties": [
+  {
+    "name": "name",
+    "type": "java.lang.String",
+    "description": "A description for 'name'"
+  },
+  {
+    "name": "environment",
+    "type": "java.lang.String",
+    "description": "A description for 'environment'"
+  },
+  {
+    "name": "spring.couchbase.name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.couchbase.name'"
+  },
+  {
+    "name": "keycloak.login-client",
+    "type": "java.lang.String",
+    "description": "A description for 'keycloak.login-client'"
+  },
+  {
+    "name": "keycloak.login-client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'keycloak.login-client-id'"
+  },
+  {
+    "name": "keycloak-login",
+    "type": "java.lang.String",
+    "description": "A description for 'keycloak-login'"
+  },
+  {
+    "name": "keycloak-login-client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'keycloak-login-client-id'"
+  },
+  {
+    "name": "storage",
+    "type": "java.lang.String",
+    "description": "A description for 'storage'"
+  },
+  {
+    "name": "storage.couchbase.chunk-size",
+    "type": "java.lang.String",
+    "description": "A description for 'storage.couchbase.chunk-size'"
+  },
+  {
+    "name": "storage.system.location",
+    "type": "java.lang.String",
+    "description": "A description for 'storage.system.location'"
+  }
+]}

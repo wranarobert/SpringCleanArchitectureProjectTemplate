@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="LOG_PATTERN">[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%level] [%t] [%logger{36}] - %msg%n</Property>
+        <Property name="APP_LOG_ROOT">./Logs</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile 
+        	name="ServiceLog"
+            fileName="${APP_LOG_ROOT}/Service/service.log"
+            filePattern="${APP_LOG_ROOT}/Service/$${date:yyyy-MM}/service-%d{yyyy-MM-dd}-%i.log.gz"
+            ignoreExceptions="false"
+        >
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+            	<OnStartupTriggeringPolicy />
+            	<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="250MB" />
+            </Policies>
+            <DefaultRolloverStrategy />
+        </RollingFile>
+        
+        <RollingFile 
+        	name="ApplicationLog"
+            fileName="${APP_LOG_ROOT}/Application/application.log"
+            filePattern="${APP_LOG_ROOT}/Application/$${date:yyyy-MM}/application-%d{yyyy-MM-dd}-%i.log.gz"
+            ignoreExceptions="false"
+        >
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+            	<OnStartupTriggeringPolicy />
+            	<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="250MB" />
+            </Policies>
+            <DefaultRolloverStrategy />
+        </RollingFile>
+ 
+    </Appenders>
+    <Loggers>
+        <AsyncLogger name="ca" additivity="false">
+            <AppenderRef ref="ServiceLog" />
+        </AsyncLogger>
+ 
+        <AsyncRoot level="info">
+        	<AppenderRef ref="ApplicationLog" />
+        </AsyncRoot>
+    </Loggers>
+</Configuration>

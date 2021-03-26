@@ -1,0 +1,25 @@
+environment: development
+
+server:  port: 8080
+  ssl:    enabled: false
+    
+spring:
+    profiles: dev
+    servlet:
+      multipart:
+        max-file-size: 20MB
+        max-request-size: 20MB
+    couchbase:
+        bootstrap-hosts: 127.0.0.1
+        bucket:
+          name: testbucket
+          password: testbucket
+
+security:
+  oauth2:
+    client:
+      access-token-validity-seconds: 50000
+      refresh-token-validity-seconds: 50000
+    
+logging:
+  config: classpath:log4j2-dev.xml
